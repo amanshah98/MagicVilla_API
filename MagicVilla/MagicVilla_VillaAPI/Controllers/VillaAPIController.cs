@@ -78,7 +78,7 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<VillaDTO> CreateVilla([FromBody]VillaDTO villaDTO)
+        public ActionResult<VillaDTO> CreateVilla([FromBody]VillaCreateDTO villaDTO)
         {
             //if(!ModelState.IsValid)
             //{
@@ -94,17 +94,17 @@ namespace MagicVilla_VillaAPI.Controllers
             {
                 return BadRequest(villaDTO);
             }
-            if(villaDTO.Id > 0)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
+            //if(villaDTO.Id > 0)       // no need to check id, because it is not presant in villaCreateDTO
+            //{
+            //    return StatusCode(StatusCodes.Status500InternalServerError);
+            //}
             //villaDTO.Id = VillaStore.villaList.OrderByDescending(u => u.Id).FirstOrDefault().Id + 1;    //this is not needed for Entity framework core
             //VillaStore.villaList.Add(villaDTO) ;
             Villa model =new ()
             {
                 Amenity = villaDTO.Amenity,
                 Details = villaDTO.Details,
-                Id = villaDTO.Id,
+               // Id = villaDTO.Id,
                 ImageUrl = villaDTO.ImageUrl,
                 Name = villaDTO.Name,
                 Occupancy = villaDTO.Occupancy,
