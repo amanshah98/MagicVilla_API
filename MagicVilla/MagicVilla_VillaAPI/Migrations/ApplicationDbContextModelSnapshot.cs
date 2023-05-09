@@ -22,6 +22,31 @@ namespace MagicVilla_VillaAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("MagicVilla_VillaAPI.Models.LocalUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LocalUsers");
+                });
+
             modelBuilder.Entity("MagicVilla_VillaAPI.Models.Villa", b =>
                 {
                     b.Property<int>("Id")
@@ -67,7 +92,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 5, 2, 23, 42, 14, 656, DateTimeKind.Local).AddTicks(1759),
+                            CreatedDate = new DateTime(2023, 5, 8, 14, 44, 31, 374, DateTimeKind.Local).AddTicks(7075),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa3.jpg",
                             Name = "Royal Villa",
@@ -80,7 +105,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 2,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 5, 2, 23, 42, 14, 656, DateTimeKind.Local).AddTicks(1773),
+                            CreatedDate = new DateTime(2023, 5, 8, 14, 44, 31, 374, DateTimeKind.Local).AddTicks(7089),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa1.jpg",
                             Name = "Premium Pool Villa",
@@ -93,7 +118,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 3,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 5, 2, 23, 42, 14, 656, DateTimeKind.Local).AddTicks(1774),
+                            CreatedDate = new DateTime(2023, 5, 8, 14, 44, 31, 374, DateTimeKind.Local).AddTicks(7091),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa4.jpg",
                             Name = "Luxury Pool Villa",
@@ -106,7 +131,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 4,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 5, 2, 23, 42, 14, 656, DateTimeKind.Local).AddTicks(1776),
+                            CreatedDate = new DateTime(2023, 5, 8, 14, 44, 31, 374, DateTimeKind.Local).AddTicks(7093),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa5.jpg",
                             Name = "Diamond Villa",
@@ -119,7 +144,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 5,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 5, 2, 23, 42, 14, 656, DateTimeKind.Local).AddTicks(1778),
+                            CreatedDate = new DateTime(2023, 5, 8, 14, 44, 31, 374, DateTimeKind.Local).AddTicks(7095),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa2.jpg",
                             Name = "Diamond Pool Villa",
