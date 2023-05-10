@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xmTFx7drHDgIhSojo1AT2OchCgY8UI8T9SUYylwO7qegLXahJFGieM0qm/GLw29CL1H6qmpRsO/mOK0qlUn4bg==",
+  "dgSpecHash": "VF9nJq0zx5Uh05ZInGxAz9CzDW2HR+iZsjv43arhSPydeCrRTYZJIefvQu4eMZ89Tp3q7RdK3N7mouLRpUFFXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\aman\\OneDrive\\Desktop\\RestAPI\\MagicVilla\\MagicVilla_VillaAPI\\MagicVilla_VillaAPI.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\aman\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.5\\microsoft.aspnetcore.authentication.jwtbearer.7.0.5.nupkg.sha512",
     "C:\\Users\\aman\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.5\\microsoft.aspnetcore.jsonpatch.7.0.5.nupkg.sha512",
     "C:\\Users\\aman\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.5\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.5.nupkg.sha512",
+    "C:\\Users\\aman\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\aman\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\aman\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\aman\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\aman\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

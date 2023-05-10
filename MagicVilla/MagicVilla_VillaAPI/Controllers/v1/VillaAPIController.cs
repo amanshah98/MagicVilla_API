@@ -11,11 +11,11 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections;
 using System.Net;
 
-namespace MagicVilla_VillaAPI.Controllers
+namespace MagicVilla_VillaAPI.Controllers.v1
 {
-    [Route("api/VillaAPI")]
-
+    [Route("api/v{version:apiVersion}/VillaAPI")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class VillaAPIController : ControllerBase
     {
         protected APIResponse _response;
@@ -25,11 +25,11 @@ namespace MagicVilla_VillaAPI.Controllers
         {
             _dbVilla = dbVilla;
             _mapper = mapper;
-            this._response = new();
+            _response = new();
         }
 
         [HttpGet]
-        
+
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -53,7 +53,7 @@ namespace MagicVilla_VillaAPI.Controllers
         }
 
 
-        
+
         [HttpGet("{id:int}", Name = "GetVilla")]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -70,14 +70,14 @@ namespace MagicVilla_VillaAPI.Controllers
             {
                 if (id == 0)
                 {
-                    _response.StatusCode=HttpStatusCode.BadRequest;
+                    _response.StatusCode = HttpStatusCode.BadRequest;
                     return BadRequest(_response);
                 }
 
                 var villa = await _dbVilla.GetAsync(x => x.Id == id);
                 if (villa == null)
                 {
-                    _response.StatusCode=HttpStatusCode.NotFound;
+                    _response.StatusCode = HttpStatusCode.NotFound;
                     return NotFound(_response);
                 }
                 _response.Result = _mapper.Map<VillaDTO>(villa);
